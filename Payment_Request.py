@@ -46,7 +46,7 @@ from selenium.webdriver.common.keys import Keys
 # )
 
 #-----------------------------------------------------------------------------#
-# Read excel file and sum work searches between two dates.
+# Read excel file and sum work searches for week 1 and week 2.
 data = pd.read_excel(
     r'C:\Users\Matt\Dropbox\1 Job Search Related Items\Daily Work Log.xlsx',
     sheet_name='TWC Work Search Log'
@@ -60,11 +60,11 @@ date_1 = datetime.datetime.strptime(week1_start_date, r'%m-%d-%Y')
 end_date1 = date_1 + datetime.timedelta(days=7)
 
 after_week1 = (df[df['Date of Activity'] >= date_1])
-before_end_date = (df[df['Date of Activity'] <= end_date1])
-between_two_dates = (df[(df['Date of Activity']>=date_1) &
+before_end_date1 = (df[df['Date of Activity'] <= end_date1])
+between_two_dates1 = (df[(df['Date of Activity']>=date_1) &
 (df['Date of Activity']<=end_date1)])
 
-week1_work_searches = between_two_dates.sum()
+week1_work_searches = between_two_dates1.sum()
 print(week1_work_searches)
 
 #--------Week 1--------------------#
@@ -75,11 +75,11 @@ date_2 = datetime.datetime.strptime(week2_start_date, r'%m-%d-%Y')
 end_date2 = date_2 + datetime.timedelta(days=7)
 
 after_week2 = (df[df['Date of Activity'] >= date_2])
-before_end_date = (df[df['Date of Activity'] <= end_date2])
-between_two_dates = (df[(df['Date of Activity']>=date_2) &
+before_end_date2 = (df[df['Date of Activity'] <= end_date2])
+between_two_dates2 = (df[(df['Date of Activity']>=date_2) &
 (df['Date of Activity']<=end_date2)])
 
-week2_work_searches = between_two_dates.sum()
+week2_work_searches = between_two_dates2.sum()
 print(week2_work_searches)
 
 
