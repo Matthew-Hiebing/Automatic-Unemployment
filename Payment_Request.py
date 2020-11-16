@@ -10,29 +10,29 @@ from selenium.webdriver.common.keys import Keys
 #-----------------------------------------------------------------------------#
 
 # Log into Texas Workforce Commission website.
-# driver = webdriver.Firefox(
-#     executable_path=
-#     r'D:\Users\Matt\Documents\GitHub\Executable_Files\geckodriver.exe'
-# )
+driver = webdriver.Firefox(
+    executable_path=
+    r'D:\Users\Matt\Documents\GitHub\Executable_Files\geckodriver.exe'
+)
 
-# conf = yaml.load(open(r'D:\Users\Matt\Documents\GitHub\YML_Files\Unemployment_Credentials.yml'))
+conf = yaml.load(open(r'D:\Users\Matt\Documents\GitHub\YML_Files\Unemployment_Credentials.yml'))
 
-# my_username = conf['Unemployment']['username']
-# my_password = conf['Unemployment']['password']
+my_username = conf['Unemployment']['username']
+my_password = conf['Unemployment']['password']
 
-# def login(url,usernameID,passwordID,login_button):
-#     driver.get(url)
-#     time.sleep(3)
-#     driver.find_element_by_id(usernameID).send_keys(my_username)
-#     driver.find_element_by_id(passwordID).send_keys(my_password)
-#     driver.find_element_by_name(login_button).click()
+def login(url,usernameID,passwordID,login_button):
+    driver.get(url)
+    time.sleep(3)
+    driver.find_element_by_id(usernameID).send_keys(my_username)
+    driver.find_element_by_id(passwordID).send_keys(my_password)
+    driver.find_element_by_name(login_button).click()
 
-# login(
-#     'https://login.apps.twc.state.tx.us/UBS/security/logon.do',
-#     'field.label.username',
-#     'field.label.password',
-#     'method:logon'
-# )
+login(
+    'https://login.apps.twc.state.tx.us/UBS/security/logon.do',
+    'field.label.username',
+    'field.label.password',
+    'method:logon'
+)
 
 # def payment_request(payment_request):
 #     driver.find_element_by_xpath(payment_request).click()
