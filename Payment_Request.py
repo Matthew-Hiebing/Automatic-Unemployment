@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 #-----------------------------------------------------------------------------#
-# LOG INTO TWC WEBSITE AND BEGIN PAYMENT REQUEST
+# LOGS YOU INTO TWC WEBSITE AND BEGIN PAYMENT REQUEST
 driver = webdriver.Firefox(
     executable_path=
     r'D:\Users\Matt\Documents\GitHub\Executable_Files\geckodriver.exe'
