@@ -30,7 +30,9 @@ import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-pd.read_excel('excel.xlsx') #returns your data
-pd.DataFrame(data) #returns your dataframe
+pd.read_excel('excel.xlsx') # returns data
+pd.DataFrame(data) # returns your dataframe
+yaml.load(file.yaml) # returns your stored username and password
+webdriver.Firefox('path to geckodriver.exe') # starts your browser using geckodriver.exe
 
 ```
