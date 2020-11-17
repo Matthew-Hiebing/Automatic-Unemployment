@@ -2,10 +2,10 @@
  Automatically goes through TWC unemployment payment request workflow every other week.
  
 ## Programming Language(s)
-```bash
+
 Python was used as the primary programming language for this script.
 Windows Task Schedular was used to run Python script every other week.
-```
+
 
 ## Installation
 
