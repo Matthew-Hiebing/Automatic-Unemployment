@@ -12,7 +12,6 @@ Windows Task Schedular was used to run Python script every other week.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the packages:
 
 ```bash
-
 pip install pandas
 pip install numpy
 pip install selenium
@@ -34,5 +33,4 @@ pd.read_excel('excel.xlsx') # returns data
 pd.DataFrame(data) # returns your dataframe
 yaml.load(file.yaml) # returns your stored username and password
 webdriver.Firefox('path to geckodriver.exe') # starts your browser using geckodriver.exe
-
 ```
