@@ -1,15 +1,18 @@
 # Automatic Unemployment
  Automatically goes through TWC unemployment payment request workflow every other week.
-
- # Foobar
-
-Foobar is a Python library for dealing with word pluralization.
+ 
+## Programming Language(s)
+```bash
+Python was used as the primary programming language for this script.
+Windows Task Schedular was used to run Python script every other week.
+```
 
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the packages:
 
 ```bash
+
 pip install pandas
 pip install numpy
 pip install selenium
