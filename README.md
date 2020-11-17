@@ -1,5 +1,5 @@
 # Automatic Unemployment
- Automatically Goes Through Unemployment Payment Request
+ Automatically goes through TWC unemployment payment request workflow every other week.
 
  # Foobar
 
@@ -7,26 +7,27 @@ Foobar is a Python library for dealing with word pluralization.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the packages:
 
 ```bash
-pip install foobar
+pip install pandas
+pip install numpy
+pip install selenium
+pip install xlrd
 ```
 
 ## Usage
 
 ```python
-import foobar
+import pandas as pd
+import numpy as np
+import time
+import yaml
+import datetime
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+pd.read_excel('excel.xlsx') #returns your data
+pd.DataFrame(data) #returns your dataframe
+
 ```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
