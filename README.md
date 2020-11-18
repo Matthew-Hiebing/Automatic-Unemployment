@@ -1,4 +1,4 @@
-# Automatic Unemployment :desktop_computer: :briefcase:
+# Automatic Unemployment Payment Request Script:desktop_computer: :briefcase:
  Automatically goes through TWC unemployment payment request workflow every other week.
  
 ## Programming Language(s)
