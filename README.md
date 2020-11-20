@@ -1,10 +1,10 @@
 # Automatic Unemployment Payment Request Script:desktop_computer: :briefcase:
- Automatically goes through TWC unemployment payment request workflow every other week.
+ Automatically goes through TWC unemployment payment request workflow every other Tuesday.
  
 ## Programming Language(s)
 
-Python was used as the primary programming language for this script.
-Windows Task Schedular was used to run Python script every other week.
+Python was used as the primary programming language.
+Windows Task Schedular was used to run Python script every other Tuesday(or whichever day is your official filing day).
 
 
 ## Installation
