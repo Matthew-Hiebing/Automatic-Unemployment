@@ -16,6 +16,7 @@ pip install pandas
 pip install numpy
 pip install selenium
 pip install xlrd
+pip install PyYAML
 ```
 
 ## Usage
