@@ -5,6 +5,9 @@ import yaml
 import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 #-----------------------------------------------------------------------------#
 # LOGS YOU INTO TWC WEBSITE AND BEGIN PAYMENT REQUEST
@@ -13,34 +16,33 @@ driver = webdriver.Firefox(
     r'D:\Users\Matt\Documents\GitHub\Executable_Files\geckodriver.exe'
 )
 
-conf = yaml.load(open(r'D:\Users\Matt\Documents\GitHub\YML_Files\Unemployment_Credentials.yml'))
+conf = yaml.load(open(
+    r'D:\Users\Matt\Documents\GitHub\YML_Files\Unemployment_Credentials.yml')
+)
 
 my_username = conf['Unemployment']['username']
 my_password = conf['Unemployment']['password']
 
-def login(url,usernameID,passwordID,login_button):
-    driver.get(url)
+def login():
+    driver.get('https://login.apps.twc.state.tx.us/UBS/security/logon.do')
     time.sleep(5)
-    driver.find_element_by_id(usernameID).send_keys(my_username)
-    driver.find_element_by_id(passwordID).send_keys(my_password)
-    driver.find_element_by_name(login_button).click()
+    driver.find_element_by_id('field.label.username',).send_keys(my_username)
+    driver.find_element_by_id('field.label.password',).send_keys(my_password)
+    driver.find_element_by_name('method:logon').click()
     time.sleep(5)
+    payment_request()
 
-login(
-    'https://login.apps.twc.state.tx.us/UBS/security/logon.do',
-    'field.label.username',
-    'field.label.password',
-    'method:logon'
-)
+# LOGS YOU INTO TWC WEBSITE
+login()
 
 def payment_request():
     # CHECKS IF ITS TOO EARLY TO FILE. IF IT IS, THE SCRIPT STOPS
     driver.find_element_by_xpath('/html/body/div/div[3]/div[1]/div/ul[1]/li[4]/a').click()
     if (driver.find_element_by_class_name('page-name').text) == 'Early Filing':
         driver.quit()
-    # IF ITS NOT TOO EARLY TO FILE THE PAYMENT REQUEST CONTINUES
+    # IF It IS NOT TOO EARLY TO FILE, THE PAYMENT REQUEST CONTINUES
     else:
-        # PULLS CLAIM WEEK DATES FROM TWC
+        # PULLS CLAIM WEEK DATES FROM TWC WEBPAGE
         claim_week_pull = driver.find_element_by_class_name('page-header-row-value-1col').text[0:12]
         claim_week_convert_to_str = claim_week_pull.replace(',','')
         date_1 = datetime.datetime.strptime(claim_week_convert_to_str,r'%b %d %Y')
@@ -65,7 +67,7 @@ def payment_request():
         #CONTINUE PAYMENT REQUEST
         '''
         This series of button clicks goes through the website pages, fills in
-        the radio buttons and enters the work searches you've completed into
+        the radio buttons, and enters the work searches you've completed into
         the required fields when they come up.  After this is complete the
         script is ended and the browser window closes.
         '''
