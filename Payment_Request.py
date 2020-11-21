@@ -10,10 +10,10 @@ from selenium.webdriver.common.keys import Keys
 # LOGS YOU INTO TWC WEBSITE AND BEGIN PAYMENT REQUEST
 driver = webdriver.Firefox(
     executable_path=
-    r'[path_to_geckodriver executable]'
+    r'D:\Users\Matt\Documents\GitHub\Executable_Files\geckodriver.exe'
 )
 
-conf = yaml.load(open(r'[path_to_your_credentials.yml]'))
+conf = yaml.load(open(r'D:\Users\Matt\Documents\GitHub\YML_Files\Unemployment_Credentials.yml'))
 
 my_username = conf['Unemployment']['username']
 my_password = conf['Unemployment']['password']
@@ -47,7 +47,7 @@ def payment_request():
 
         #---------------------------------------------------------------------#
         # CREATE DATAFRAME FROM LOCAL EXCEL FILE AND READS TWO COLUMNS OF DATA
-        data = pd.read_excel(r'[path_to_excel_containing_job_applications.xlsx]', sheet_name='TWC Work Search Log')
+        data = pd.read_excel(r'C:\Users\Matt\Dropbox\1 Job Search Related Items\Daily Work Log.xlsx', sheet_name='TWC Work Search Log')
         df = pd.DataFrame(data, columns= ['Date of Activity', 'Work Search Count'])
 
         # ADD UP WORK SEARCHES FOR WEEK 1
