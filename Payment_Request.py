@@ -23,17 +23,6 @@ conf = yaml.load(open(
 my_username = conf['Unemployment']['username']
 my_password = conf['Unemployment']['password']
 
-def login():
-    driver.get('https://login.apps.twc.state.tx.us/UBS/security/logon.do')
-    time.sleep(5)
-    driver.find_element_by_id('field.label.username',).send_keys(my_username)
-    driver.find_element_by_id('field.label.password',).send_keys(my_password)
-    driver.find_element_by_name('method:logon').click()
-    time.sleep(5)
-    payment_request()
-
-# LOGS YOU INTO TWC WEBSITE
-login()
 
 def payment_request():
     # CHECKS IF ITS TOO EARLY TO FILE. IF IT IS, THE SCRIPT STOPS
@@ -96,9 +85,17 @@ def payment_request():
         driver.find_element_by_name('method:submit').click()
         driver.quit()
 
-# STARTS PAYMENT REQUEST FUNCTION
-payment_request()
+def login():
+    driver.get('https://login.apps.twc.state.tx.us/UBS/security/logon.do')
+    time.sleep(5)
+    driver.find_element_by_id('field.label.username',).send_keys(my_username)
+    driver.find_element_by_id('field.label.password',).send_keys(my_password)
+    driver.find_element_by_name('method:logon').click()
+    time.sleep(5)
+    payment_request()
 
+# LOGS YOU INTO TWC WEBSITE
+login()
 
 
 
