@@ -1,9 +1,9 @@
 # Automatic Unemployment Payment Request Script:desktop_computer: :briefcase:
-With millions of people trying to file for unemployment and peform payment requests through Texas' Workfoce Commision (TWC) website, the site has become bogged down and often times crashes while you're trying to fill out your information. I created a simple script to automate the process.  You can use Windows Task Schedular to have this script ran in the middle of night, typically when there's less people and the site has a higher chance of successfully completing your payment requests.  Make sure to have your task scheduler only run the script on your filing day that is provided by TWC.
- 
+With millions of people trying to file for unemployment and peform payment requests through Texas' Workfoce Commision (TWC) website, the site has become bogged down and often times crashes while you're trying to fill out your information for a payment request. I created a simple script to automate the process.  You can use Windows Task Schedular to run this script in the middle of night, typically when there's less site-traffice. Make sure to have your task scheduler only run the script on your filing day that is provided by TWC.
+
+Notes:
 The script will automatically pull your two claim weeks and use them to add up the number of job searches you completed for each claim week.
- 
-Automatically goes through Texas Workfoce Commision unemployment payment request workflow every other Tuesday (filing day).
+See the examples .py, yml, and .xlxs files to set things up for yourself.  The .py file called, "Payment_Request" is my working file.  I included it if you want to see how I have things set up.
  
 ## Programming Language(s)
 
