@@ -1,5 +1,5 @@
 # Automatic Unemployment Payment Request Script:desktop_computer: :briefcase:
- Automatically goes through Texas Workfoce Commision unemployment payment request workflow every other Tuesday.
+ Automatically goes through Texas Workfoce Commision unemployment payment request workflow every other Tuesday (filing day).
  
 ## Programming Language(s)
 
