@@ -10,7 +10,7 @@ See the examples .py, yml, and .xlxs files to set things up for yourself.  The .
 ## Programming Language(s)
 
 Python was used as the primary programming language.
-Windows Task Schedular was used to run Python script every other Tuesday(or whichever day is your official filing day).
+Windows Task Schedular was used to run the Python script every other Tuesday(or whichever day is your official filing day).
 
 
 ## Installation
