@@ -5,7 +5,7 @@ I created a simple script to automate the process for anyone who doesn't want to
 
 Notes:
 The script will automatically pull your two claim weeks and use them to add up the number of job searches you completed for each claim week.
-See the examples .py, yml, and .xlxs files to set things up for yourself.  The .py file called, "Payment_Request" is my working file.  I included it if you want to see how I have things set up.  The script will only successfully execute if it run on the correctly payment request day.  If the script is executed outside of this day an error message will post in the console telling you which day you were supposed to make a request.
+See the examples .py, yml, and .xlxs files to set things up for yourself.  The .py file called, "Payment_Request" is my working file, I included it if you want to see how I have things set up.  The script will only successfully execute if it run on the correctly payment request day.  If the script is executed outside of this day an error message will post in the console telling you which day you were supposed to make a request.
  
 ## Programming Language(s)
 
