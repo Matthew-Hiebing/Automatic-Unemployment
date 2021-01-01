@@ -41,3 +41,8 @@ pd.DataFrame(data) # returns your dataframe
 yaml.load(file.yaml) # returns your stored username and password
 webdriver.Firefox('path to geckodriver.exe') # starts your browser using geckodriver.exe
 ```
+
+## Questions?
+Send me a message on GitHub (Matthew-Hiebing) or E-mail me at: Matthew.Hiebing@gmail.com
+
+
