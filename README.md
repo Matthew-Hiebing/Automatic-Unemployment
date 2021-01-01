@@ -1,4 +1,4 @@
-# Automatic Unemployment Payment Request Script:desktop_computer: :briefcase:
+# Automatic Unemployment Payment Request App:desktop_computer: :briefcase:
 With millions of people trying to file for unemployment and peform payment requests through the Texas Workforce Commision (TWC) website.  The site has become bogged down, usually crashing while you're trying to fill out your information for a payment request. I created a simple script to automate the process for anyone who doesn't want to risk not being able to place a payment request.  For the highest chance of success, I would recommend setting up Windows Task Schedular to run this script in the middle of the night or early morning when there is less site traffic. Make sure to have your task scheduler run the script on your filing day that is provided by TWC.
 
 Notes:
