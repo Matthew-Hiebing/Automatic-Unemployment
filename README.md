@@ -43,7 +43,7 @@ webdriver.Firefox('path to geckodriver.exe') # starts your browser using geckodr
 I found Windows Task Scheduler to be a bit difficult to set up.  Here's a quick breakdown of the setup process:\
 
 1.) Create a new task in Windows Task Scheduler.\
-![Imgur](https://i.imgur.com/xaTqG3d.png)
+![Imgur](https://i.imgur.com/wCeQ3HF.jpg)
 
 2.) Set your "Triggers".  Set this to the day you wantt the script to run and have it run every two weeks.\
 ![Imgur](https://i.imgur.com/NHVgAgo.png)
