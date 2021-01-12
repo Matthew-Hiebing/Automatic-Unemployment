@@ -5,6 +5,8 @@ import yaml
 import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait as wait
+from selenium.webdriver.support import expected_conditions as EC
 
 #-----------------------------------------------------------------------------#
 # LOGS YOU INTO TWC WEBSITE AND BEGIN PAYMENT REQUEST
@@ -58,7 +60,10 @@ def payment_request():
         script is ended and the browser window closes.
         '''
         driver.find_element_by_id('addressChangeAnswer-radio.label.no').click()
-        driver.find_element_by_name('method:submit').click()
+        wait(browser, 10).until(EC.frame_to_be_available_and_switch_to_it(browser.find_element_by_xpath('//iframe[contains(@src, "google.com/recaptcha")]')))
+        wait(browser, 10).until(EC.frame_to_be_available_and_switch_to_it(browser.find_element_by_xpath('//*[@id="recaptcha-anchor"]')))
+        wait(browser, 10).until(EC.element_to_be_clickable((By.ID, 'recaptcha-anchor'))).click()
+        # driver.find_element_by_name('method:submit').click()
         time.sleep(5)
         driver.find_element_by_id('workOrEarnWagesWeek1-radio.label.no').click()
         driver.find_element_by_id('vacationOrHolidayPayWeek1-radio.label.no').click()
