@@ -1,5 +1,5 @@
 # Automatic Unemployment Payment Request App:desktop_computer: :briefcase:
-With millions of people out of work and trying to file for unemployment during the Covid 19 pandemic, the Texas Workforce Commission (TWC) website has become bogged down, usually crashing during the payment request process. Once the website stops working you have to make the dreaded 'phone call' and wait for hours, and that's only if you can eventually get through.
+With millions of people out of work and trying to file for unemployment during the Covid-19 pandemic, the Texas Workforce Commission (TWC) website has become bogged down, usually crashing during the payment request process. Once the website stops working you have to make the dreaded 'phone call' and wait for hours, and that's only if you can eventually get through.
 
 I noticed that the site works a lot better in the middle of the night or early hours of the morning.  I created a simple script to automate the process for anyone who doesn't want to risk not being able to make their bi-weekly payment request.  I recommend using Windows Task Schedular to set up a run time in the middle of the night when the site experiences less traffic, you'll have the highest chance of successfully making payment requests this way.
 
