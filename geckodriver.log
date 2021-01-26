@@ -361,3 +361,50 @@ JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jq
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1611673204403	geckodriver	INFO	Listening on 127.0.0.1:61920
+1611673207425	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofileTAvNBt"
+1611674084733	geckodriver	INFO	Listening on 127.0.0.1:59996
+1611674087755	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofile6YEcUI"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611674090461	Marionette	INFO	Listening on port 60004
+1611674090911	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611674090923	Marionette	ERROR	[18] No reply from Marionette:Register
+JavaScript warning: https://login.apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1611674110929	Marionette	INFO	Stopped listening on port 60004
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611674183088	geckodriver	INFO	Listening on 127.0.0.1:60082
+1611674186111	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofilezlxKBK"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611674188779	Marionette	INFO	Listening on port 60090
+1611674189251	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611674189264	Marionette	ERROR	[18] No reply from Marionette:Register
+JavaScript warning: https://login.apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1611674208697	Marionette	INFO	Stopped listening on port 60090
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611674254678	geckodriver	INFO	Listening on 127.0.0.1:60175
+1611674257691	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Matt\\AppData\\Local\\Temp\\rust_mozprofiledAkAej"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611674260349	Marionette	INFO	Listening on port 60184
+1611674260819	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611674260831	Marionette	ERROR	[18] No reply from Marionette:Register
+JavaScript warning: https://login.apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://apps.twc.state.tx.us/UBS/core/javascript/previous/jquery-1.10.2.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1611674299149	Marionette	INFO	Stopped listening on port 60184
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

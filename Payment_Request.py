@@ -54,15 +54,13 @@ def payment_request():
         #---------------------------------------------------------------------#
         #CONTINUE PAYMENT REQUEST
         '''
-        This series of button clicks goes through the website pages, fills in
+        This series of button clicks goes through the website, fills in
         the radio buttons, and enters the work searches you've completed into
-        the required fields when they come up.  After this is complete the
-        script is ended and the browser window closes.
+        the required fields when they come up.  After this process is complete,
+        the script is stopped and the browser window closes.
         '''
         driver.find_element_by_id('addressChangeAnswer-radio.label.no').click()
-        wait(browser, 10).until(EC.frame_to_be_available_and_switch_to_it(browser.find_element_by_xpath('//iframe[contains(@src, "google.com/recaptcha")]')))
-        wait(browser, 10).until(EC.frame_to_be_available_and_switch_to_it(browser.find_element_by_xpath('//*[@id="recaptcha-anchor"]')))
-        wait(browser, 10).until(EC.element_to_be_clickable((By.ID, 'recaptcha-anchor'))).click()
+        driver.find_elements_by_class_name('recaptcha-checkbox goog-inline-block recaptcha-checkbox-unchecked rc-anchor-checkbox').click()
         # driver.find_element_by_name('method:submit').click()
         time.sleep(5)
         driver.find_element_by_id('workOrEarnWagesWeek1-radio.label.no').click()
