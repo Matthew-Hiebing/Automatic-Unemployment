@@ -60,7 +60,10 @@ def payment_request():
         the script is stopped and the browser window closes.
         '''
         driver.find_element_by_id('addressChangeAnswer-radio.label.no').click()
-        driver.find_elements_by_class_name('recaptcha-checkbox goog-inline-block recaptcha-checkbox-unchecked rc-anchor-checkbox').click()
+        iframe = driver.find_element_by_xpath(
+            "//iframe[@name='recaptcha-checkbox goog-inline-block recaptcha-checkbox-unchecked rc-anchor-checkbox']")
+        driver.switch_to.frame(iframe)
+        driver.find_elements_by_id('recaptcha-anchor').click()
         # driver.find_element_by_name('method:submit').click()
         time.sleep(5)
         driver.find_element_by_id('workOrEarnWagesWeek1-radio.label.no').click()
