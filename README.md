@@ -1,11 +1,13 @@
 # Automatic Unemployment Payment Request App:desktop_computer: :briefcase:
-With millions of people out of work and trying to file for unemployment during the Covid-19 pandemic, the Texas Workforce Commission (TWC) website has become bogged down, usually crashing during the payment request process. Once the website stops working, you have to make the dreaded 'phone call' and wait for hours, and that's only if you can eventually get through.
+During the Covid-19 pandemic millions of people were out of work and trying to file for unemployment through the Texas Workforce Commission (TWC) website.  The site became severely bogged down, usually crashing during one's payment request process. Once the website stopped working, you had to make the dreaded 'phone call' and wait for hours, and that's only if you eventually got through.
 
-I noticed that the site works a lot better in the middle of the night or early hours of the morning, everybody is getting their rest!  I created a simple script to automate the process for anyone who doesn't want to risk not being able to make their bi-weekly payment request.  I recommend using Windows Task Schedular to set up a start time in the middle of the night when the site experiences less traffic, you'll have the highest chance of success this way.
+I noticed that the site worked a lot better in the middle of the night or during the early hours of the morning; everybody is getting their rest!  I created a simple script to automate the process for anyone who didn't want to risk missing one of their bi-weekly payment requests.  
+
+I recommend using Windows Task Schedular (or a cron job) to set up a start time in the middle of the night when the site experiences less traffic, you'll have the highest chance of success this way.  The workflow below uses Windows Task Schedular.
 
 Notes:
 The script will automatically pull your two claim weeks and use them to add up the number of job searches you completed for each claim week.
-See the example .py, yml, and .xlxs files to set things up for yourself.  The .py file called, "Payment_Request" is my working file, I included it if you want to see a real-time example.  The script will only successfully execute if it is run on the correct payment request day.  If the script is executed outside of this day an error message will post in the console telling you which day you were supposed to make a request.
+See the example .py, yml, and .xlxs files to set things up for yourself.  The .py file called, "Payment_Request" is my working file, I included it if you want to see a real-life example.  The script will only successfully execute if it is run on the correct payment request day.  If the script is executed outside of this day an error message will post in the console telling you which day you were supposed to make a request.
  
 ## Programming Language(s)
 Python was used as the primary programming language.
