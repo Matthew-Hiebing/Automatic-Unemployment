@@ -5,17 +5,15 @@ import yaml
 import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait as wait
+from selenium.webdriver.support import expected_conditions as EC
 
 #-----------------------------------------------------------------------------#
-# LOGS YOU INTO TWC WEBSITE AND BEGIN PAYMENT REQUEST
-driver = webdriver.Firefox(
-    executable_path=
-    r'[path_to_geckodriver_executable]'
-)
+# LOGS YOU INTO TWC WEBSITE AND BEGINS THE PAYMENT REQUEST PROCESS
+driver = webdriver.Firefox(executable_path=r'[path_to_geckodriver_executable]')
 
-conf = yaml.load(open(
-    r'[path_to_your_credentials.yml]')
-)
+# Get your username and password from the YAML file.
+conf = yaml.load(open(r'[path_to_your_credentials.yml]'))
 
 my_username = conf['Unemployment']['username']
 my_password = conf['Unemployment']['password']
@@ -24,17 +22,17 @@ my_password = conf['Unemployment']['password']
 def payment_request():
     # CHECKS IF ITS TOO EARLY TO FILE. IF IT IS, THE SCRIPT STOPS.
     driver.find_element_by_xpath('/html/body/div/div[3]/div[1]/div/ul[1]/li[4]/a').click()
-    if (driver.find_element_by_class_name('page-name').text) == 'Early Filing':
-        driver.quit()
-    # IF IT IS NOT TOO EARLY TO FILE, THE PAYMENT REQUEST CONTINUES.
+    if (driver.find_element_by_class_name('page-name').text) == 'Early Filing': driver.quit()
+
+    # IF IT ISN'T TOO EARLY TO FILE, THE PAYMENT REQUEST CONTINUES.
     else:
-        # PULLS CLAIM WEEK DATES FROM TWC WEBPAGE
+        # PULLS CLAIM WEEK DATES FROM THE TWC WEBPAGE
         claim_week_pull = driver.find_element_by_class_name('page-header-row-value-1col').text[0:12]
         claim_week_convert_to_str = claim_week_pull.replace(',','')
         date_1 = datetime.datetime.strptime(claim_week_convert_to_str,r'%b %d %Y')
 
         #---------------------------------------------------------------------#
-        # CREATE DATAFRAME FROM LOCAL EXCEL FILE AND READS TWO COLUMNS OF DATA.
+        # CREATES DATAFRAME FROM LOCAL EXCEL FILE AND READS TWO COLUMNS OF DATA.
         data = pd.read_excel(r'[path_excel_sheet_containing_work_searches.xlsx]', sheet_name='TWC Work Search Log')
         df = pd.DataFrame(data, columns= ['Date of Activity', 'Work Search Count'])
 
@@ -89,6 +87,7 @@ def login():
     driver.find_element_by_id('field.label.password',).send_keys(my_password)
     driver.find_element_by_name('method:logon').click()
     time.sleep(5)
+    ## Call payment_request() to start the payment request after logging in.
     payment_request()
 
 # LOGS YOU INTO TWC WEBSITE
