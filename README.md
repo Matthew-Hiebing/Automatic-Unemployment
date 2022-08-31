@@ -42,18 +42,18 @@ webdriver.Firefox('path to geckodriver.exe') # starts your browser using geckodr
 ```
 
 ## Windows Task Scheduler Setup
-I found Windows Task Scheduler to be a bit difficult to set up.  Here's a quick breakdown of the setup process:\
+I found Windows Task Scheduler to be a bit difficult to set up.  Here's a quick breakdown of the setup process:
 
-1.) Create a new task in Windows Task Scheduler.\
+1.) Create a new task in Windows Task Scheduler.
 ![Imgur](https://i.imgur.com/wCeQ3HF.jpg)
 
-2.) Set your "Triggers".  Set this to the day you wantt the script to run and have it run every two weeks.\
+2.) Set your "Triggers".  Set this to the day you wantt the script to run and have it run every two weeks.
 ![Imgur](https://i.imgur.com/NHVgAgo.png)
 
-3.) Set your "Actions".  This part is a little tricky.\
+3.) Set your "Actions".  This part is a little tricky.
 * Set your action to "Start a program".  In "Program/script" navigate to the location where you have Python installed on your computer.
 * In "Add arguments" enter the name of your Python script.  Mine is called, "Payment_Request".
-* In "Start in" enter the location of the folder that holds your Python script.  In my case, its the name of the repository folder on my computer.\
+* In "Start in" enter the location of the folder that holds your Python script.  In my case, its the name of the repository folder on my computer.
 ![Imgur](https://i.imgur.com/WLpDRHv.png)
 
 After you complete the above steps you should be good to go!
