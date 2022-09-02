@@ -54,6 +54,7 @@ I found Windows Task Scheduler to be a bit difficult to set up.  Here's a quick 
 * Set your action to "Start a program".  In "Program/script" navigate to the location where you have Python installed on your computer.
 * In "Add arguments" enter the name of your Python script.  Mine is called, "Payment_Request".
 * In "Start in" enter the location of the folder that holds your Python script.  In my case, its the name of the repository folder on my computer.
+
 ![Imgur](https://i.imgur.com/WLpDRHv.png)
 
 After you complete the above steps you should be good to go!
